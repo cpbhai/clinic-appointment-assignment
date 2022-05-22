@@ -1,0 +1,44 @@
+.homeMyProfile {
+  font-size: 15px;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.home-hr-1 {
+  margin: 0 10%;
+}
+.homeUName {
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 20px;
+}
+.homeEmail {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+.homeAppsDiv {
+  display: flex;
+  justify-content: space-around;
+}
+.homeNumber {
+  font-weight: bold;
+  font-size: 20px;
+}
+.homeNumber > span {
+  font-weight: normal;
+  font-size: 14px;
+}
+.homeStreaksDiv {
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 20px;
+}
+.homeBtns {
+  color: #fff;
+  width: 300px;
+  margin-top: 25px;
+}

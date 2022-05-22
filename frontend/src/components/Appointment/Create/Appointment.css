@@ -1,0 +1,12 @@
+.createAP {
+  font-weight: bold;
+  margin-top: -20px;
+}
+
+.createAPIcon {
+  padding: 18px 0 0 10px;
+  height: 40px;
+  width: 28px;
+  /* background-color: red; */
+  cursor: pointer;
+}

@@ -1,0 +1,9 @@
+.authBox {
+  box-shadow: 1px 2px 9px rgba(15, 15, 15, 0.76);
+  border-radius: 10px;
+  padding: 6px;
+}
+.signinWithGBtn {
+  color: darkgray;
+  border: 1px solid #2196f3;
+}

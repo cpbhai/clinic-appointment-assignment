@@ -1,0 +1,28 @@
+.dFlex {
+  display: flex;
+}
+.dFlexWrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+.justCent {
+  justify-content: center;
+}
+.justEven {
+  justify-content: space-evenly;
+}
+.mt-1 {
+  margin-top: 10px;
+}
+.mb-1 {
+  margin-bottom: 10px;
+}
+.textCent {
+  text-align: center;
+}
+.darkgray {
+  color: darkgray;
+}
+.fwb {
+  font-weight: bold;
+}

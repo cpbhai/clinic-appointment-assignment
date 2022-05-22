@@ -1,0 +1,13 @@
+.appCardDiv1 {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.appCardContact {
+  font-size: 13px;
+  margin: 1px;
+}
+.appCardDate {
+  font-size: 13px;
+  text-align: center;
+}
