@@ -40,6 +40,7 @@ const AppointmentCard = ({ data }) => {
                 border: "1px solid #aeea00",
               },
             }}
+            onClick={() => window.open(data.meetingData.url, "_blank")}
           >
             Join Call
           </Button>

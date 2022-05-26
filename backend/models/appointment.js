@@ -28,6 +28,10 @@ const appointmentSchema = new mongoose.Schema(
       ref: "User",
       required: true,
     },
+    meetingData: {
+      type: Object,
+      default: null,
+    },
   },
   {
     timestamps: true,

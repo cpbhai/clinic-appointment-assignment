@@ -73,7 +73,7 @@ const Appointment = () => {
     if (!mobile) return Swal.fire("Oops", "Mobile can't be empty", "warning");
     if (!datetime)
       return Swal.fire("Oops", "Date and Time was not selected", "warning");
-    dispatch(createAppointment(values));
+    dispatch(createAppointment(values, user));
   };
   return (
     <>

@@ -12,10 +12,23 @@ import {
 } from "../constants/appointment";
 
 //create appointment
-export const createAppointment = (body) => async (dispatch) => {
+export const createAppointment = (body, user) => async (dispatch) => {
   dispatch({ type: CREATE_APPOINTMENT_REQUEST });
   const token = cookie.load("token");
+  // debugger;
   try {
+    const meetingData = await axios({
+      method: "post",
+      url: `https://api.daily.co/v1/rooms`,
+      headers: {
+        Authorization:
+          "Bearer b0662a29a0518b535ea7f8aaee35a19faac0b9eb00c9c055f38355b6c7a485bb",
+        "Content-Type": "application/json",
+      },
+      // data: body,
+    });
+    body.meetingData = meetingData.data;
+
     const response = await axios({
       method: "post",
       url: `${BASE_URL}appointment/create`,
@@ -25,6 +38,17 @@ export const createAppointment = (body) => async (dispatch) => {
       data: body,
     });
     const { data } = response;
+
+    //mail
+    axios({
+      method: "post",
+      url: `${BASE_URL}send-email-meeting`,
+      data: {
+        to: [user.email, body.email],
+        user: user.fullName,
+        meetingData: meetingData.data,
+      },
+    });
     dispatch({
       type: CREATE_APPOINTMENT_SUCCESS,
       payload: data.message,
