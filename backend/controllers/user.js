@@ -23,6 +23,7 @@ exports.signup = async (req, res) => {
 exports.login = async (req, res) => {
   try {
     const { password } = req.body;
+    if (!password) throw { message: "Password is missing" };
     delete req.body.password;
     const user = await userModel.findOne(req.body).select("+password");
     if (!user) throw { message: "No Such User Found" };
